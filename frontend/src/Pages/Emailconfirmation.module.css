@@ -1,0 +1,327 @@
+.email_container {
+  display: flex;
+  flex-direction: column;
+  width: 98.8vw;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  min-width: 98.8vw;
+  flex-direction: row;
+  border-bottom: 1px solid #f2f5f4;
+}
+
+.list1 {
+  display: flex;
+  width: 40%;
+  height: fit-content;
+  align-items: center;
+  /* align-items: flex-start; */
+}
+
+.ulist1 {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* align-items: flex-start; */
+  padding: 20px;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.list_items {
+  display: flex;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.list_link,
+.list_head {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+}
+
+.list_link {
+  color: #717077;
+  font-weight: 700;
+  font-size: small;
+  font-family: "Manrope", sans-serif;
+}
+.list_head {
+  color: black;
+  font-weight: 900;
+  font-size: x-large;
+  font-family: "Sacramento", cursive;
+}
+
+.list2 {
+  display: flex;
+  /* height: fit-content; */
+  width: 25%;
+  align-items: center;
+  justify-content: space-evenly;
+  /* align-items: flex-end; */
+}
+.ulist2 {
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  /* align-items: flex-start; */
+  padding: 10px 20px;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: space-around;
+}
+
+.search_input::placeholder {
+  color: #9b9da0;
+}
+
+.search {
+  /* width: fit-content; */
+  background-color: #f2f5f4;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.search_input {
+  width: 70px;
+  font-size: medium;
+  padding-left: 5px;
+  background-color: #f2f5f4;
+}
+
+.profile {
+  display: flex;
+  height: 40px;
+  width: 70px;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* margin: 40px */
+}
+.profile_image {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+/* 
+<FontAwesomeIcon icon={faBriefcase} /> */
+
+/* <FontAwesomeIcon icon={faCircleXmark} /> */
+
+.cart {
+  position: relative; /* Ensure the container is positioned */
+  display: inline-block;
+  width: calc(3vw + 6px);
+  padding: 0 10px; /* Make the container inline-block to fit its content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faBriefcase {
+  position: relative; /* Ensure the icon is positioned */
+}
+
+.faCircleXmark {
+  position: absolute; /* Position the icon absolutely */
+  bottom: 0; /* Align the icon to the bottom of the container */
+  right: 0;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white; /* Align the icon to the right of the container */
+}
+
+.upload_btn {
+  background-color: #ea4b8a;
+  color: white;
+  padding: 0 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 50vh; */
+  padding: 70px 0;
+}
+
+.footer {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  width: 98.8vw;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  /* height: 50vh; */
+  padding-top: 50px;
+}
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.row1_heading {
+  font-family: "Sacramento", cursive;
+  /* padding-left: 50px; */
+  font-weight: 600;
+  font-size: xx-large;
+  color: #df5086;
+}
+
+.p_footer {
+  font-family: "Manrope", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 600;
+  font-size: small;
+  color: #525254;
+  /* font-style: normal; */
+}
+
+.foot_links {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+  color: #5e5f64;
+  font-size: small;
+  padding: 5px 0;
+}
+
+.footer_h4 {
+  font-weight: 600;
+  font-size: small;
+  font-family: "Manrope", sans-serif;
+  color: black;
+}
+
+.body_p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.body_h2 {
+  font-family: "Manrope", sans-serif;
+  /* font-family: "Sacramento", cursive; */
+  font-weight: 600;
+}
+
+.email {
+  font-family: "Manrope", sans-serif;
+  font-weight: 900;
+}
+
+.email_icon {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    padding-top: 5px;
+}
+
+.faEnvelope {
+  color: #bbbbbb;
+  font-size: 5rem;
+}
+
+.faCircleCheck {
+  color: #ea4b8a;
+  font-size: 2rem;
+  position: absolute;
+  top: 0rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 4px solid white;
+  right: 0rem;
+}
+
+.body_link
+{
+    text-decoration: none;
+    color: #de4984;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+}
+
+
+
+
+
+/* EmailSender.module.css */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust height as needed */
+}
+
+.spinner {
+  width: 40px; /* Adjust size of spinner */
+  height: 40px; /* Adjust size of spinner */
+  border: 4px solid #f3f3f3; /* Light grey border */
+  border-top: 4px solid #3498db; /* Blue border on top */
+  border-radius: 50%; /* Make it a circle */
+  animation: spin 1s linear infinite; /* Apply rotation animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start rotation at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End rotation at 360 degrees */
+  }
+}
+
+
+.menu {
+  position: absolute;
+  top: 60px; /* Adjust the top position as needed */
+  right: 100px; /* Adjust the right position as needed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 5px;
+}
+
+.menu_item {
+  cursor: pointer;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.menu_item:hover {
+  background-color: #f0f0f0;
+}
+
+.logout_button {
+  background-color: #ea4b8a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logout_button:hover {
+  background-color: #d43f6f;
+}

@@ -1,0 +1,10 @@
+/* index.css */
+
+/* Remove default styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; /* Ensures that padding and border are included in the element's total width and height */
+  }
+  

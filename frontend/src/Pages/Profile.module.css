@@ -1,0 +1,197 @@
+.dribbble {
+  color: #e84c8a;
+  font-family: "Sacramento", cursive;
+  padding-left: 50px;
+  padding-top: 50px;
+  font-weight: 700;
+  font-size: xx-large;
+}
+.profile_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manrope_900 {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.int {
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.insertImg {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: row;
+}
+
+.inputBtn {
+  display: flex;
+  /* align-items: flex-start; */
+  /* justify-content: center; */
+  padding: 20px;
+  flex-direction: column;
+}
+
+.img {
+  height: 150px;
+  width: 150px;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #dad9dc dashed 3px;
+  border-radius: 50%;
+}
+
+.uploaded {
+  border: none;
+}
+
+.img_upload_btn {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #ffff;
+  border: #ececec solid 1.5px;
+  border-radius: 10px;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  /* font-style: normal; */
+  width: fit-content;
+}
+
+.para_style {
+  color: #99989d;
+  font-family: "Manrope", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 700;
+  font-size: small;
+  cursor: pointer;
+}
+
+.location_div h2 {
+  /* font-optical-sizing: auto; */
+  font-weight: 900;
+  padding: 20px 0;
+  /* font-style: normal; */
+}
+
+.location_div {
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  display: flex;
+  border-bottom: #ebebeb solid 2px;
+  flex-direction: column;
+}
+
+.location_div input {
+  font-weight: 600;
+  /* text-decoration: underline; */
+  font-size: medium;
+  padding: 10px 0;
+}
+.location_div input::placeholder {
+  color: #a09ea6;
+}
+
+.location_div input:focus {
+  outline: none;
+}
+.nxt_btn {
+  margin-top: 40px;
+  padding: 10px 70px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.nxt_btn_active {
+  background-color: #dc4e86;
+  cursor: pointer;
+}
+.nxt_btn_inactive {
+  background-color: #f8b8d0
+}
+
+.end_para {
+  padding: 10px 20px;
+  color: #99989d;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: small;
+}
+
+.end_para_a {
+  text-decoration: none;
+  color: #99989d;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+  .profile_container {
+    padding: 0 20px;
+  }
+  
+  .int {
+    align-items: center;
+  }
+  
+  .insertImg {
+    flex-direction: column;
+  }
+
+  .img {
+    margin-bottom: 20px;
+  }
+  
+  .inputBtn {
+    padding: 0;
+  }
+  
+  .img_upload_btn {
+    width: 100%;
+  }
+  
+  .location_div input {
+    width: 100%;
+  }
+}
+
+.file_upload {
+  display: none;
+}
+
+.custom_file_upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.p
+{
+  font-family: "Manrope", sans-serif;
+  color: #99989d;
+}
+
+.invisible
+{
+  /* color: white; */
+  /* pointer-events: none; */
+  display: none;
+}
