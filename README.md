@@ -34,6 +34,6 @@ The project is structured as follows:
 Feedback and suggestions for improvements are welcome! Feel free to open an issue or submit a pull request with your ideas.
 
 ## Contact
-If you have any questions or inquiries regarding this project or my application, please feel free to reach out to me via email at [your.email@example.com](mailto:your.email@example.com).
+If you have any questions or inquiries regarding this project or my application, please feel free to reach out to me via email at [your.email@example.com](mailto:yug.g03@gmail.com).
 
 Thank you for visiting!
