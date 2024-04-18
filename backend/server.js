@@ -15,7 +15,7 @@ app.use(express.json());
 // Enable CORS for all requests
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://internship-task-dribbble.vercel.app/",
     credentials: true,
     methods: ["GET", "POST", "PUT"],
     allowedHeaders: ["Content-Type", "Authorization"], // Allow credentials (e.g., cookies, authorization headers)
