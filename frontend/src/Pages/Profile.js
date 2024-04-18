@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from '../config';
 
 const Profile = () => {
   // const fileInputRef = useRef(null);
@@ -44,7 +45,7 @@ const Profile = () => {
     try {
       // Fetch user profile from the database
       const response = await axios.get(
-        `http://localhost:5000/api/user/getprofile/${userId}`
+        `${BASE_URL}/api/user/getprofile/${userId}`
       );
       const userProfile = response.data;
       if (userProfile.pic && userProfile.location) {
@@ -65,7 +66,7 @@ const Profile = () => {
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", "internship_project"); // Replace with your Cloudinary upload preset
+    formData.append("upload_preset", process.env.UPLOAD_PRESET); // Replace with your `Clou`dinary upload preset
     try {
       const response = await fetch(
         "https://api.cloudinary.com/v1_1/yug-chatapp/image/upload",
@@ -115,7 +116,7 @@ const Profile = () => {
 
       // Send a PUT request to update the user's profile in the database
       const response = await axios.put(
-        `http://localhost:5000/api/user/setprofile/${userId}`,
+        `${BASE_URL}/api/user/setprofile/${userId}`,
         data // Send the updated profile data
       ); // Display the updated profile details
     } catch (error) {

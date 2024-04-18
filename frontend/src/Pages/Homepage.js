@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import axios from "axios";
+import BASE_URL from '../config';
 import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
@@ -58,7 +59,7 @@ const Homepage = () => {
         },
       };
       const response = await axios.post(
-        "/api/user", // Update the URL
+        `${BASE_URL}/api/user`, // Update the URL
         { ...formData },
         config
       );

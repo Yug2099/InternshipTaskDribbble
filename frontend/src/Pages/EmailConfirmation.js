@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
+import BASE_URL from '../config';
 import {
   faBasketball,
   faBriefcase,
@@ -40,7 +41,7 @@ const EmailConfirmation = () => {
 
     try {
       // Send request to backend to send email
-      await axios.post(`http://localhost:5000/api/user/sendemail/${userId}`);
+      await axios.post(`${BASE_URL}/api/user/sendemail/${userId}`);
       setEmailSent(true);
     } catch (error) {
       setError(error.message);
