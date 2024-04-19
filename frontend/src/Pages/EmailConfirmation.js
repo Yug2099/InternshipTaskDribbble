@@ -32,6 +32,7 @@ const EmailConfirmation = () => {
     // Clear userInfo from localStorage
     navigate("/");
     localStorage.removeItem("userInfo");
+    localStorage.removeItem("back");
     // Redirect user to logout page or any other page as needed
     // window.location.href = "/logout"; // Example: Redirect to logout page
   };
@@ -64,7 +65,7 @@ const EmailConfirmation = () => {
         sendEmail();
       }
     }, [navigate]);
-    
+
     try {
       const { BASE_URL } = configfile;
       // Send request to backend to send email
