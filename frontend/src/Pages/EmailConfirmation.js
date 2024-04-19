@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-import configfile from "../configfile";
+import BASE_URL from '../config';
 import {
   faBasketball,
   faBriefcase,
@@ -26,7 +26,6 @@ const EmailConfirmation = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
-  const [userImage, setUserImage] = useState("");
   const navigate = useNavigate();
   const handleLogout = () => {
     // Clear userInfo from localStorage
@@ -38,44 +37,26 @@ const EmailConfirmation = () => {
 
   const sendEmail = async () => {
     setIsLoading(true);
-    console.log(isLoading);
     setError(null);
-    console.log(error);
-    const fetchUserProfile = async () => {
-      try {
-        const { BASE_URL } = configfile;
-        // Fetch user profile from the database
-        const response = await axios.get(
-          `${BASE_URL}/api/user/getprofile/${userId}`
-        );
-        const userProfile = response.data;
-        // Update the state with the user's image URL
-        setUserImage(userProfile.pic);
-      } catch (error) {
-        console.error("Error fetching user profile:", error);
-      }
-    };
 
     try {
-      const { BASE_URL } = configfile;
       // Send request to backend to send email
       await axios.post(`${BASE_URL}/api/user/sendemail/${userId}`);
       setEmailSent(true);
-      console.log(emailSent);
     } catch (error) {
       setError(error.message);
     } finally {
       setIsLoading(false);
     }
-    useEffect(() => {
-      if (!userInfo) {
-        navigate("/");
-      } else {
-        fetchUserProfile(); // Fetch user profile when component mounts
-        sendEmail();
-      }
-    }, [navigate]);
   };
+
+  useEffect(() => {
+    if (!userInfo) {
+      navigate("/");
+    } else {
+      sendEmail();
+    }
+  }, [navigate]);
 
   return (
     <>
@@ -152,14 +133,19 @@ const EmailConfirmation = () => {
                   onClick={() => setShowMenu(!showMenu)}
                   style={{ cursor: "pointer" }}
                 >
-                  {userImage ? (
+                  {userInfo.pic ? (
                     <img
-                      src={userImage}
+                      src={userInfo.pic}
                       alt="Profile"
                       className={styles.profile_image}
                     />
                   ) : (
-                    <FontAwesomeIcon icon={faUserCircle} size="2xl" />
+                    <FontAwesomeIcon
+                      icon={faUserCircle}
+                      className="styles.profile_image"
+                      // height="40px"
+                      size="2xl"
+                    />
                   )}
                   {showMenu && (
                     <ul className={styles.menu}>
@@ -227,7 +213,7 @@ const EmailConfirmation = () => {
             </p>
             <p className={styles.body_p}>
               you still don't see it, you can{" "}
-              <a onClick={sendEmail} className={styles.body_link}>
+              <a href="" className={styles.body_link}>
                 resend the confirmation email.
               </a>
             </p>
