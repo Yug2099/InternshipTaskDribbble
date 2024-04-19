@@ -38,7 +38,9 @@ const EmailConfirmation = () => {
 
   const sendEmail = async () => {
     setIsLoading(true);
+    console.log(isLoading);
     setError(null);
+    console.log(error);
     const fetchUserProfile = async () => {
       try {
         const { BASE_URL } = configfile;
@@ -59,6 +61,7 @@ const EmailConfirmation = () => {
       // Send request to backend to send email
       await axios.post(`${BASE_URL}/api/user/sendemail/${userId}`);
       setEmailSent(true);
+      console.log(emailSent);
     } catch (error) {
       setError(error.message);
     } finally {
