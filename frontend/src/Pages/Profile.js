@@ -57,14 +57,10 @@ const Profile = () => {
           method: "POST",
           body: formData,
         }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      );
+      if (!response.ok) {
+        throw new Error("Failed to upload image");
+      }
       const data = await response.json();
       const imageUrl = data.secure_url; // Get the secure URL of the uploaded image
       // Log the image URL
@@ -73,6 +69,9 @@ const Profile = () => {
       console.error("Error handling file change:", error);
     }
   };
+
+
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
