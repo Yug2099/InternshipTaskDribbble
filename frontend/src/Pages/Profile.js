@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import configfile from '../configfile';
+import configfile from "../configfile";
 
 const Profile = () => {
   const { UPLOAD_PRESET } = configfile;
   const { BASE_URL } = configfile;
   const [image, setImage] = useState(null);
   const [location, setLocation] = useState("");
-  const [visible, setVisible] = useState(styles.invisible)
+  const [visible, setVisible] = useState(styles.invisible);
   const navigate = useNavigate();
   const [nextButtonClassName, setNextButtonClassName] = useState(
     styles.nxt_btn_inactive
@@ -57,10 +57,17 @@ const Profile = () => {
           method: "POST",
           body: formData,
         }
-      );
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
       const data = await response.json();
       const imageUrl = data.secure_url; // Get the secure URL of the uploaded image
-       // Log the image URL
+      // Log the image URL
       setImage(imageUrl); // Set the uploaded image as the background
     } catch (error) {
       console.error("Error handling file change:", error);
@@ -114,10 +121,10 @@ const Profile = () => {
   const updateNextButtonClassName = () => {
     if (image && location) {
       setNextButtonClassName(styles.nxt_btn_active); // Class name when both image and location are filled
-      setVisible(styles.visible)
+      setVisible(styles.visible);
     } else {
       setNextButtonClassName(styles.nxt_btn_inactive); // Class name when either image or location is not filled
-      setVisible(styles.invisible)
+      setVisible(styles.invisible);
     }
   };
 
@@ -141,7 +148,9 @@ const Profile = () => {
                 Welcome! Let's create your profile
               </h1>
               <br />
-              <p className={styles.p}>Let others get to know you better! You can do these later</p>
+              <p className={styles.p}>
+                Let others get to know you better! You can do these later
+              </p>
               <br />
               <br />
               <h3 className={styles.manrope_900}>Add an avatar</h3>
@@ -201,7 +210,10 @@ const Profile = () => {
                 Next
               </button>
               <p className={`${styles.end_para} ${visible}`}>
-                Or press <a href="" className={`${styles.end_para_a} ${visible}`}>RETURN</a>
+                Or press{" "}
+                <a href="" className={`${styles.end_para_a} ${visible}`}>
+                  RETURN
+                </a>
               </p>
             </div>
           </form>
