@@ -77,38 +77,40 @@ const Profile = () => {
 
   // Function to update user's profile picture and location in the database
   const updateUserProfile = async () => {
-    try {
-      // Retrieve user information from local storage
-      const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-      if (!userInfo || !userInfo._id) {
-        console.error("User information not found in local storage");
-        return;
-      }
-
-      // Construct the updated user profile data
-      const updatedProfile = {
-        pic: image, // Updated key from profilePic to pic
-        location: location, // Updated key from userLocation to location
-      };
-
-      // Wrap the updatedProfile object inside another object
-      const data = { updatedProfile };
-
-      // Send a PUT request to update the user's profile in the database
-      const response = await axios.put(
-        `${BASE_URL}/api/user/setprofile/${userId}`,
-        data // Send the updated profile data
-      );
-      userInfo = { ...userInfo, pic: image, location: location };
-      localStorage.removeItem("userInfo");
-      localStorage.setItem("userInfo", JSON.stringify(userInfo));
-
-      // Display the updated profile details
-      console.log("Profile updated successfully:", response.data);
-    } catch (error) {
-      console.error("Error updating profile:", error);
+  try {
+    // Retrieve user information from local storage
+    let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (!userInfo || !userInfo._id) {
+      console.error("User information not found in local storage");
+      return;
     }
-  };
+
+    // Construct the updated user profile data
+    const updatedProfile = {
+      pic: image,
+      location: location,
+    };
+
+    // Send a PUT request to update the user's profile in the database
+    const response = await axios.put(
+      `${BASE_URL}/api/user/setprofile/${userId}`,
+      updatedProfile
+    );
+
+    // Update the userInfo object with the new profile data
+    userInfo = { ...userInfo, ...updatedProfile };
+
+    // Update userInfo in local storage
+    localStorage.removeItem("userInfo");
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+    // Display the updated profile details
+    console.log("Profile updated successfully:", response.data);
+  } catch (error) {
+    console.error("Error updating profile:", error);
+  }
+};
+
 
   const handleDefaultImg = () => {
     setImage("https://icon-library.com/images/anonymous-avatar-icon-25.jpg");
