@@ -180,13 +180,17 @@
     width: 100%;
     display: flex;
     flex-direction: column; /* Adjust width for mobile */
+    align-items: center;
+    justify-items: center; /* Adjust padding for mobile */
   }
 
   .preference_container {
     width: 100%;
     padding: 0;
     display: flex;
-    flex-direction: row-reverse; /* Adjust padding for mobile */
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-items: center; /* Adjust padding for mobile */
   }
 
   .back_btn {
