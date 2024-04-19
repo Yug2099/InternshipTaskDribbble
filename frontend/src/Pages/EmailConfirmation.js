@@ -26,6 +26,7 @@ const EmailConfirmation = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
+  const [userImage, setUserImage] = useState("");
   const navigate = useNavigate();
   const handleLogout = () => {
     // Clear userInfo from localStorage
@@ -34,7 +35,7 @@ const EmailConfirmation = () => {
     // Redirect user to logout page or any other page as needed
     // window.location.href = "/logout"; // Example: Redirect to logout page
   };
-  
+
   const sendEmail = async () => {
     setIsLoading(true);
     setError(null);
@@ -42,7 +43,9 @@ const EmailConfirmation = () => {
       try {
         const { BASE_URL } = configfile;
         // Fetch user profile from the database
-        const response = await axios.get(`${BASE_URL}/api/user/getprofile/${userId}`);
+        const response = await axios.get(
+          `${BASE_URL}/api/user/getprofile/${userId}`
+        );
         const userProfile = response.data;
         // Update the state with the user's image URL
         setUserImage(userProfile.pic);
@@ -50,7 +53,7 @@ const EmailConfirmation = () => {
         console.error("Error fetching user profile:", error);
       }
     };
-    
+
     try {
       const { BASE_URL } = configfile;
       // Send request to backend to send email
@@ -70,7 +73,6 @@ const EmailConfirmation = () => {
       }
     }, [navigate]);
   };
-
 
   return (
     <>
@@ -222,7 +224,7 @@ const EmailConfirmation = () => {
             </p>
             <p className={styles.body_p}>
               you still don't see it, you can{" "}
-              <a href="" className={styles.body_link}>
+              <a onClick={sendEmail} className={styles.body_link}>
                 resend the confirmation email.
               </a>
             </p>
