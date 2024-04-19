@@ -8,6 +8,7 @@ import Img2 from "./images/Img2.png";
 import Img3 from "./images/Img3.png";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [cardClass1, setCardClass1] = useState(styles.card1_active);
   const [card1, setCard1] = useState(styles.card1_select_inactive);
   const [cardClass2, setCardClass2] = useState(styles.card2_active);
@@ -24,7 +25,7 @@ const Profile = () => {
       navigate("/");
       return;
     }
-  },[navigate]);
+  }, [navigate]);
 
   const handleBackBtn = () => {
     navigate(-1);
@@ -93,7 +94,6 @@ const Profile = () => {
 
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-  const navigate = useNavigate();
   const handleFinish = () => {
     // Navigate to the next page
     navigate(`/emailconfirmation/${userInfo._id}`); // Replace "/next-page" with the desired URL
