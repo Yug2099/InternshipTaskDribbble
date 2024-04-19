@@ -28,16 +28,6 @@ const EmailConfirmation = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [userImage, setUserImage] = useState("");
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!userInfo) {
-      navigate("/");
-    } else {
-      fetchUserProfile(); // Fetch user profile when component mounts
-      sendEmail();
-    }
-  }, [navigate]);
-
   const handleLogout = () => {
     // Clear userInfo from localStorage
     navigate("/");
@@ -66,6 +56,15 @@ const EmailConfirmation = () => {
       }
     };
 
+    useEffect(() => {
+      if (!userInfo) {
+        navigate("/");
+      } else {
+        fetchUserProfile(); // Fetch user profile when component mounts
+        sendEmail();
+      }
+    }, [navigate]);
+    
     try {
       const { BASE_URL } = configfile;
       // Send request to backend to send email
