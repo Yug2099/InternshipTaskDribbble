@@ -44,15 +44,15 @@ const Profile = () => {
   };
 
   const handleFileChange = async (e) => {
+    const { UPLOAD_PRESET } = configfile;
     const file = e.target.files[0]; // Log the file uploaded by the user
 
     const formData = new FormData();
     formData.append("file", file);
-    const { UPLOAD_PRESET } = configfile;
-    formData.append("upload_preset", "internship_task"); // Replace with your `Clou`dinary upload preset
+    formData.append("upload_preset", "profile_dribbble"); // Replace with your `Clou`dinary upload preset
     try {
       const response = await fetch(
-        "https://api.cloudinary.com/v1_1/yug-chatapp/image/upload",
+        "https://api.cloudinary.com/v1_1/dribbble/image/upload",
         {
           method: "POST",
           body: formData,
