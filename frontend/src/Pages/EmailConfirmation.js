@@ -61,10 +61,10 @@ const EmailConfirmation = () => {
       if (!userInfo) {
         navigate("/");
       } else {
-        fetchUserProfile(); // Fetch user profile when component mounts
         sendEmail();
       }
-    }, [navigate]);
+      fetchUserProfile(); // Fetch user profile when component mounts
+    }, []);
 
     try {
       const { BASE_URL } = configfile;
