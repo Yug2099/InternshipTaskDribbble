@@ -106,8 +106,9 @@ const Profile = () => {
         `${BASE_URL}/api/user/setprofile/${userId}`,
         data // Send the updated profile data
       );
-      // userInfo = { ...userInfo, pic: image, location: location };
-      // localStorage.setItem("userInfo", JSON.stringify(userInfo));
+      userInfo = { ...userInfo, pic: image, location: location };
+      localStorage.removeItem("userInfo");
+      localStorage.setItem("userInfo", JSON.stringify(userInfo));
 
       // Display the updated profile details
       console.log("Profile updated successfully:", response.data);
