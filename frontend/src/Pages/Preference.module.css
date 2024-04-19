@@ -188,7 +188,7 @@
     width: 100%;
     padding: 0;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     justify-items: center; /* Adjust padding for mobile */
   }
