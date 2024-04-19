@@ -67,15 +67,15 @@ const EmailConfirmation = () => {
     } finally {
       setIsLoading(false);
     }
-    useEffect(() => {
-      if (!userInfo) {
-        navigate("/");
-      } else {
-        fetchUserProfile(); // Fetch user profile when component mounts
-        sendEmail();
-      }
-    }, [navigate]);
   };
+  useEffect(() => {
+    if (!userInfo) {
+      navigate("/");
+    } else {
+      fetchUserProfile(); // Fetch user profile when component mounts
+      sendEmail();
+    }
+  }, [navigate]);
 
   return (
     <>
