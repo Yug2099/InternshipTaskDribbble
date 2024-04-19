@@ -28,7 +28,6 @@ const EmailConfirmation = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [userImage, setUserImage] = useState("");
   const navigate = useNavigate();
-
   const handleLogout = () => {
     // Clear userInfo from localStorage
     navigate("/");
@@ -52,7 +51,6 @@ const EmailConfirmation = () => {
         setUserImage(userProfile.pic);
       } catch (error) {
         console.error("Error fetching user profile:", error);
-        setError(error.message); // Log error
       }
     };
 
@@ -62,21 +60,19 @@ const EmailConfirmation = () => {
       await axios.post(`${BASE_URL}/api/user/sendemail/${userId}`);
       setEmailSent(true);
     } catch (error) {
-      console.error("Error sending email:", error);
-      setError(error.message); // Log error
+      setError(error.message);
     } finally {
       setIsLoading(false);
     }
+    useEffect(() => {
+      if (!userInfo) {
+        navigate("/");
+      } else {
+        fetchUserProfile(); // Fetch user profile when component mounts
+        sendEmail();
+      }
+    }, [navigate]);
   };
-
-  useEffect(() => {
-    if (!userInfo) {
-      navigate("/");
-    } else {
-      fetchUserProfile(); // Fetch user profile when component mounts
-      sendEmail();
-    }
-  }, [navigate]);
 
   return (
     <>
