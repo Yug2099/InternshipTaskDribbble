@@ -26,6 +26,7 @@ const EmailConfirmation = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
+  const [userImage, setUserImage] = useState();
   const navigate = useNavigate();
   const handleLogout = () => {
     // Clear userInfo from localStorage
