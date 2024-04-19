@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import BASE_URL from '../config';
-import UPLOAD_PRESET from '../config';
+import configfile from '../configfile';
 
 const Profile = () => {
+  const { UPLOAD_PRESET } = configfile;
+  const { BASE_URL } = configfile;
   const [image, setImage] = useState(null);
   const [location, setLocation] = useState("");
   const [visible, setVisible] = useState(styles.invisible)

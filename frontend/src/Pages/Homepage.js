@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import axios from "axios";
-import BASE_URL from '../config';
+import configfile from '../configfile';
 import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
@@ -17,6 +17,7 @@ const Homepage = () => {
   });
 
   const [submitBtn, setSubmitBtn] = useState("submit_btn_inactive");
+  const { BASE_URL } = configfile;
 
   // useEffect(() => {
   //   const userInfoString = localStorage.getItem("userInfo");
