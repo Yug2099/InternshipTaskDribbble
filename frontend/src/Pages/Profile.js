@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import configfile from "../configfile";
 
 const Profile = () => {
-  const { UPLOAD_PRESET } = configfile;
   const { BASE_URL } = configfile;
   const [image, setImage] = useState(null);
   const [location, setLocation] = useState("");
@@ -49,6 +48,7 @@ const Profile = () => {
 
     const formData = new FormData();
     formData.append("file", file);
+    const { UPLOAD_PRESET } = configfile;
     formData.append("upload_preset", UPLOAD_PRESET); // Replace with your `Clou`dinary upload preset
     try {
       const response = await fetch(
