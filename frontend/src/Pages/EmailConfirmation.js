@@ -28,6 +28,7 @@ const EmailConfirmation = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [userImage, setUserImage] = useState("");
   const navigate = useNavigate();
+
   const handleLogout = () => {
     // Clear userInfo from localStorage
     navigate("/");
@@ -42,29 +43,6 @@ const EmailConfirmation = () => {
     console.log(isLoading);
     setError(null);
     console.log(error);
-    const fetchUserProfile = async () => {
-      try {
-        const { BASE_URL } = configfile;
-        // Fetch user profile from the database
-        const response = await axios.get(
-          `${BASE_URL}/api/user/getprofile/${userId}`
-        );
-        const userProfile = response.data;
-        // Update the state with the user's image URL
-        setUserImage(userProfile.pic);
-      } catch (error) {
-        console.error("Error fetching user profile:", error);
-      }
-    };
-
-    useEffect(() => {
-      if (!userInfo) {
-        navigate("/");
-      } else {
-        sendEmail();
-      }
-      fetchUserProfile(); // Fetch user profile when component mounts
-    }, []);
 
     try {
       const { BASE_URL } = configfile;
@@ -78,6 +56,30 @@ const EmailConfirmation = () => {
       setIsLoading(false);
     }
   };
+
+  const fetchUserProfile = async () => {
+    try {
+      const { BASE_URL } = configfile;
+      // Fetch user profile from the database
+      const response = await axios.get(
+        `${BASE_URL}/api/user/getprofile/${userId}`
+      );
+      const userProfile = response.data;
+      // Update the state with the user's image URL
+      setUserImage(userProfile.pic);
+    } catch (error) {
+      console.error("Error fetching user profile:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (!userInfo) {
+      navigate("/");
+    } else {
+      sendEmail();
+      fetchUserProfile(); // Fetch user profile when component mounts
+    }
+  }, []);
 
   return (
     <>
