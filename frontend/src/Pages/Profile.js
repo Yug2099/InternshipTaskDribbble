@@ -49,7 +49,7 @@ const Profile = () => {
     const formData = new FormData();
     formData.append("file", file);
     const { UPLOAD_PRESET } = configfile;
-    formData.append("upload_preset", UPLOAD_PRESET); // Replace with your `Clou`dinary upload preset
+    formData.append("upload_preset", "internship_task"); // Replace with your `Clou`dinary upload preset
     try {
       const response = await fetch(
         "https://api.cloudinary.com/v1_1/yug-chatapp/image/upload",
