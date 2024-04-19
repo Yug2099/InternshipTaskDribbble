@@ -49,6 +49,7 @@ const EmailConfirmation = () => {
           `${BASE_URL}/api/user/getprofile/${userId}`
         );
         const userProfile = response.data;
+        console.log(userProfile);
         // Update the state with the user's image URL
         setUserImage(userProfile.pic);
       } catch (error) {
