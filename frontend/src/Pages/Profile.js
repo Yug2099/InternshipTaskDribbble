@@ -16,15 +16,9 @@ const Profile = () => {
     styles.nxt_btn_inactive
   );
 
-  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
   const userId = userInfo._id;
-  useEffect(() => {
-    if (!userInfo) {
-      // User is not logged in, redirect to login page
-      navigate("/");
-    }
-    fetchUserProfile(userInfo._id);
-  }, [navigate]);
+  useEffect(() => {if (!userInfo) {navigate("/");}fetchUserProfile(userInfo._id);}, [navigate]);
 
   const fetchUserProfile = async (userId) => {
     try {
