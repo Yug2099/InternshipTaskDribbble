@@ -174,3 +174,10 @@
   color: white;
   pointer-events: none;
 }
+
+@media screen and (max-width: 768px) {
+  .preference {
+    width: fit-content;
+    height: fit-content;
+  }
+}
