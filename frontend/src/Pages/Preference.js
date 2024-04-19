@@ -16,6 +16,16 @@ const Profile = () => {
   const [card3, setCard3] = useState(styles.card3_select_inactive);
   const [finishBtn, setFinishBtn] = useState(styles.finish_btn_inactive);
   const [visible, setVisible] = useState(styles.invisible);
+
+  useEffect(() => {
+    const userInfoString = localStorage.getItem("userInfo");
+    if (!userInfoString) {
+      // userInfo key not present, redirect to "/"
+      navigate("/");
+      return;
+    }
+  },[navigate]);
+
   const handleBackBtn = () => {
     navigate(-1);
     localStorage.setItem("back", true);

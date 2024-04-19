@@ -70,9 +70,6 @@ const Profile = () => {
     }
   };
 
-
-  
-
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
 
@@ -107,7 +104,12 @@ const Profile = () => {
       const response = await axios.put(
         `${BASE_URL}/api/user/setprofile/${userId}`,
         data // Send the updated profile data
-      ); // Display the updated profile details
+      );
+      userInfo = { ...userInfo, pic: image, location: location };
+      localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+      // Display the updated profile details
+      console.log("Profile updated successfully:", response.data);
     } catch (error) {
       console.error("Error updating profile:", error);
     }

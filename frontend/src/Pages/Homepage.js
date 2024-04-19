@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import axios from "axios";
-import configfile from '../configfile';
+import configfile from "../configfile";
 import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
@@ -88,7 +88,7 @@ const Homepage = () => {
   }, [formData]);
 
   return (
-    <>
+    <div className="homepage">
       <div className="image">
         <p className="dribbble">dribbble</p>
         <h1 className="heading manrope-900">
@@ -127,7 +127,10 @@ const Homepage = () => {
                 </div>
                 <div className="row">
                   <label className="label" htmlFor="username">
-                    <span style={{ display: "none" }}>⚠ Username already exists</span>Username
+                    <span style={{ display: "none" }}>
+                      ⚠ Username already exists
+                    </span>
+                    Username
                   </label>
                   <input
                     id="username"
@@ -199,10 +202,7 @@ const Homepage = () => {
                 value="Create Account"
               />
             </form>
-            <p
-              className="manrope"
-              style={{ fontSize: "x-small", color: "#bbbabe" }}
-            >
+            <p className="manrope color">
               This site is protected by reCAPTCHA and the Google <br />{" "}
               <a className="links" href="">
                 Privacy Policy
@@ -216,7 +216,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
