@@ -207,4 +207,9 @@
   .card3_select_active {
     margin-bottom: 20px; /* Adjust margin for mobile */
   }
+  .card_container
+  {
+    display: flex;
+    flex-direction: column;
+  }
 }
