@@ -100,6 +100,7 @@ const Profile = () => {
         data // Send the updated profile data
       );
       userInfo = { ...userInfo, pic: image, location: location };
+      localStorage.removeItem("userInfo");
       localStorage.setItem("userInfo", JSON.stringify(userInfo));
 
       // Display the updated profile details
