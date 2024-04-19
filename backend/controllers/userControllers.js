@@ -72,19 +72,28 @@ const setProfile = asyncHandler(async (req, res) => {
   const userId = req.params.userId;
   const { updatedProfile } = req.body;
   try {
+    console.log("[userControllers.js] userId:", userId);
+    console.log("[userControllers.js] updatedProfile:", updatedProfile);
+
     // Find user by ID
     const user = await User.findById(userId);
+    console.log("[userControllers.js] user:", user);
 
     // Check if user exists
     if (!user) {
+      console.log("[userControllers.js] User not found");
       res.status(404).json({ message: "User not found" });
       return;
     }
 
     // Update user's profile picture and location
+    console.log("[userControllers.js] Setting user's profile picture and location");
     user.pic = updatedProfile.pic;
     user.location = updatedProfile.location;
     const updatedUser = await user.save();
+    console.log("[userControllers.js] Updated user:", updatedUser);
+    console.log("[userControllers.js] User.pic:", user.pic);
+    console.log("[userControllers.js] User.location:", user.location);
 
     // Return updated user details
     res.status(200).json({
@@ -96,10 +105,11 @@ const setProfile = asyncHandler(async (req, res) => {
       pic: updatedUser.pic,
     });
   } catch (error) {
-    console.error("Error setting profile picture:", error);
+    console.error("[userControllers.js] Error setting profile picture:", error);
     res.status(500).json({ message: "Internal server error" });
   }
 });
+
 
 const getUserProfile = asyncHandler(async (req, res) => {
   const userId = req.params.userId;
