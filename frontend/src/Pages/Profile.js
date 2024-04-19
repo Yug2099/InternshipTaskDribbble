@@ -5,9 +5,9 @@ import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import BASE_URL from '../config';
+import UPLOAD_PRESET from '../config';
 
 const Profile = () => {
-  // const fileInputRef = useRef(null);
   const [image, setImage] = useState(null);
   const [location, setLocation] = useState("");
   const [visible, setVisible] = useState(styles.invisible)
@@ -19,26 +19,11 @@ const Profile = () => {
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
   const userId = userInfo._id;
   useEffect(() => {
-    // Check if the user is logged in
-    // const userInfoString = localStorage.getItem("userInfo");
     if (!userInfo) {
       // User is not logged in, redirect to login page
       navigate("/");
     }
-
-
-    if (!JSON.parse(localStorage.getItem("back"))) {
-      navigate(`/preference/${userId}`);
-    }
-    // else if (!userInfo || !userInfo._id) {
-    //   // const userInfo = JSON.parse(userInfoString);
-    //   // User information is incomplete, redirect to login page
-    //   navigate("/");
-    // }
-    // else {
-    //   // Fetch user profile from the database
     fetchUserProfile(userInfo._id);
-    // }
   }, [navigate]);
 
   const fetchUserProfile = async (userId) => {
@@ -49,11 +34,8 @@ const Profile = () => {
       );
       const userProfile = response.data;
       if (userProfile.pic && userProfile.location) {
-        // If pic and location exist in the response data, set the state
         setImage(userProfile.pic);
         setLocation(userProfile.location);
-        // Redirect to preference page since profile is already filled
-        // navigate(`/preference/${userId}`);
       } else {
       }
     } catch (error) {
@@ -66,7 +48,7 @@ const Profile = () => {
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", process.env.UPLOAD_PRESET); // Replace with your `Clou`dinary upload preset
+    formData.append("upload_preset", UPLOAD_PRESET); // Replace with your `Clou`dinary upload preset
     try {
       const response = await fetch(
         "https://api.cloudinary.com/v1_1/yug-chatapp/image/upload",
