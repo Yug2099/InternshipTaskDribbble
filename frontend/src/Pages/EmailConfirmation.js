@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-import configfile from '../configfile';
+import configfile from "../configfile";
 import {
   faBasketball,
   faBriefcase,
@@ -38,6 +38,20 @@ const EmailConfirmation = () => {
   const sendEmail = async () => {
     setIsLoading(true);
     setError(null);
+    const fetchUserProfile = async () => {
+      try {
+        const { BASE_URL } = configfile;
+        // Fetch user profile from the database
+        const response = await axios.get(
+          `${BASE_URL}/api/user/getprofile/${userId}`
+        );
+        const userProfile = response.data;
+        // Update the state with the user's image URL
+        setUserImage(userProfile.pic);
+      } catch (error) {
+        console.error("Error fetching user profile:", error);
+      }
+    };
 
     try {
       const { BASE_URL } = configfile;
@@ -49,15 +63,15 @@ const EmailConfirmation = () => {
     } finally {
       setIsLoading(false);
     }
+    useEffect(() => {
+      if (!userInfo) {
+        navigate("/");
+      } else {
+        fetchUserProfile(); // Fetch user profile when component mounts
+        sendEmail();
+      }
+    }, [navigate]);
   };
-
-  useEffect(() => {
-    if (!userInfo) {
-      navigate("/");
-    } else {
-      sendEmail();
-    }
-  }, [navigate]);
 
   return (
     <>
@@ -134,19 +148,14 @@ const EmailConfirmation = () => {
                   onClick={() => setShowMenu(!showMenu)}
                   style={{ cursor: "pointer" }}
                 >
-                  {userInfo.pic ? (
+                  {userImage ? (
                     <img
-                      src={userInfo.pic}
+                      src={userImage}
                       alt="Profile"
                       className={styles.profile_image}
                     />
                   ) : (
-                    <FontAwesomeIcon
-                      icon={faUserCircle}
-                      className="styles.profile_image"
-                      // height="40px"
-                      size="2xl"
-                    />
+                    <FontAwesomeIcon icon={faUserCircle} size="2xl" />
                   )}
                   {showMenu && (
                     <ul className={styles.menu}>
@@ -214,7 +223,7 @@ const EmailConfirmation = () => {
             </p>
             <p className={styles.body_p}>
               you still don't see it, you can{" "}
-              <a href="" className={styles.body_link}>
+              <a onClick={sendEmail} className={styles.body_link}>
                 resend the confirmation email.
               </a>
             </p>
