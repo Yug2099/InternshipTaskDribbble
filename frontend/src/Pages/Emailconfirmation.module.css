@@ -166,10 +166,10 @@
   /* align-items: center; */
   justify-content: space-evenly;
   /* height: 50vh; */
-  padding-top: 50px 0 50px;
 }
 .footer_divide
 {
+  padding-top: 50px 0 50px;
   display: flex;
   flex-direction: row;
 }
