@@ -272,6 +272,12 @@
   height: 100px; /* Adjust height as needed */
 }
 
+.copyright
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .spinner {
   width: 40px; /* Adjust size of spinner */
   height: 40px; /* Adjust size of spinner */
