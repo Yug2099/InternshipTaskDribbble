@@ -203,5 +203,8 @@
   height: max-content;
   width: max-content;
 }
+.card_container{
+  display: flex;
+}
   
 }
