@@ -261,10 +261,10 @@ const EmailConfirmation = () => {
                   color: "#ffffff",
                   borderRadius: "50%",
                   backgroundColor: "black",
-                  marginRight: "10px"
+                  margin: "10px"
                 }}
               />
-              <FontAwesomeIcon icon={faTwitter} style={{ color: "#3b3c50" }} />
+              <FontAwesomeIcon icon={faTwitter} style={{ color: "#3b3c50", padding: "10px" }} />
               <FontAwesomeIcon
                 icon={faSquareFacebook}
                 style={{ color: "#3d3f4d", padding: "10px" }}
