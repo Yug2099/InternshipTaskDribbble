@@ -216,11 +216,11 @@
   .card1_active,
   .card2_active,
   .card3_active,
-  .card1_inactive
-  .card2_inactive
-  .card3_inactive 
+  .card1_select_active
+  .card2_select_active
+  .card3_select_active 
     {
-    margin: 0 0 50 0;
+    margin: 0 0 50px 0;
     width: fit-content;
     height: fit-content;
   }
