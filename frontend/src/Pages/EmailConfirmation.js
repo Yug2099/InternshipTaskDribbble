@@ -414,10 +414,10 @@ const EmailConfirmation = () => {
               </a>
             </div>
           <br />
-          <hr style={{borderTop: "1px solid black", width: "10px"}} />
           <br />
           </div>
           <div className={styles.copyright}>
+          <hr style={{borderTop: "1px solid black", width: "10px"}} />
             <p>©2023 Drbbble. All rights reserved.</p>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <p>
