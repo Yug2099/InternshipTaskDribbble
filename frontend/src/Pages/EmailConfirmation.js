@@ -420,9 +420,10 @@ const EmailConfirmation = () => {
           <br />
           <div className={styles.copyright}>
             <p>©2023 Drbbble. All rights reserved.</p>
-            <div style={{display: "flex", flexDirection: "row"}}>
-            <p>
-              <strong>20,501,853 </strong>shots dribbbled
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <p>
+                <strong>20,501,853 </strong>shots dribbbled
+              </p>
               <FontAwesomeIcon
                 icon={faBasketball}
                 style={{
@@ -432,7 +433,6 @@ const EmailConfirmation = () => {
                   margin: "10px",
                 }}
               />
-            </p>
             </div>
           </div>
         </div>
