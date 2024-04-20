@@ -215,8 +215,12 @@
 
   .card1_active,
   .card2_active,
-  .card3_active {
-    margin: 0;
+  .card3_active,
+  .card1_inactive
+  .card2_inactive
+  .card3_inactive 
+    {
+    margin: 0 0 50 0;
     width: fit-content;
     height: fit-content;
   }
