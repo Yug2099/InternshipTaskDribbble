@@ -261,20 +261,21 @@ const EmailConfirmation = () => {
                   color: "#ffffff",
                   borderRadius: "50%",
                   backgroundColor: "black",
+                  padding: "10px"
                 }}
               />
               <FontAwesomeIcon icon={faTwitter} style={{ color: "#3b3c50" }} />
               <FontAwesomeIcon
                 icon={faSquareFacebook}
-                style={{ color: "#3d3f4d" }}
+                style={{ color: "#3d3f4d", padding: "10px" }}
               />
               <FontAwesomeIcon
                 icon={faInstagram}
-                style={{ color: "#3b3b47" }}
+                style={{ color: "#3b3b47", padding: "10px" }}
               />
               <FontAwesomeIcon
                 icon={faPinterest}
-                style={{ color: "#434552" }}
+                style={{ color: "#434552", padding: "10px" }}
               />
             </div>
           </div>
