@@ -218,7 +218,7 @@
   .card2_active,
   .card3_active
   {
-    margin: 0 0 50px 0;
+    margin: 0 0 90px 0;
     width: fit-content;
     height: fit-content;
   }
@@ -226,7 +226,7 @@
   .card2_select_active,
   .card3_select_active
   {
-    margin: 0 0 50px 0;
+    margin: 0 0 90px 0;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -235,6 +235,6 @@
   .cards_img
   {
     position: absolute;
-    top: 0;
+    top: -90px;
   }
 }
