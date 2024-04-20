@@ -190,6 +190,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: max-content;
   }
   .pref_body
   {
