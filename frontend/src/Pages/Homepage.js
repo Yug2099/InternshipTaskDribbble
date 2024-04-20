@@ -166,6 +166,7 @@ const Homepage = () => {
                   type="password"
                   value={formData.password}
                   onChange={handleChange}
+                  minLength={6}
                   autoComplete=""
                 />
               </div>
