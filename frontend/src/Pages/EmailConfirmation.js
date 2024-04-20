@@ -261,10 +261,13 @@ const EmailConfirmation = () => {
                   color: "#ffffff",
                   borderRadius: "50%",
                   backgroundColor: "black",
-                  margin: "10px"
+                  margin: "10px",
                 }}
               />
-              <FontAwesomeIcon icon={faTwitter} style={{ color: "#3b3c50", padding: "10px" }} />
+              <FontAwesomeIcon
+                icon={faTwitter}
+                style={{ color: "#3b3c50", padding: "10px" }}
+              />
               <FontAwesomeIcon
                 icon={faSquareFacebook}
                 style={{ color: "#3d3f4d", padding: "10px" }}
@@ -406,23 +409,25 @@ const EmailConfirmation = () => {
               Design Industry Trends
             </a>
           </div>
-        </div>
         <br />
         <br />
         <hr />
         <br />
         <div className={styles.copyright}>
-        <p>©2023 Drbbble. All rights reserved.</p>
-        <p><strong>20,501,853 </strong>shots dribbbled
-        <FontAwesomeIcon
-                icon={faBasketball}
-                style={{
-                  color: "#ffffff",
-                  borderRadius: "50%",
-                  backgroundColor: "black",
-                  margin: "10px"
-                }}
-              /></p>
+          <p>©2023 Drbbble. All rights reserved.</p>
+          <p>
+            <strong>20,501,853 </strong>shots dribbbled
+            <FontAwesomeIcon
+              icon={faBasketball}
+              style={{
+                color: "#ffffff",
+                borderRadius: "50%",
+                backgroundColor: "black",
+                margin: "10px",
+              }}
+            />
+          </p>
+        </div>
         </div>
       </div>
     </>
