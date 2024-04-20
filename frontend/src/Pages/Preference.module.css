@@ -213,4 +213,13 @@
     height: fit-content;
     width: fit-content;
   }
+  .cardClass1,
+  .card1,
+  .cardClass2,
+  .card2,
+  .cardClass3,
+  .card3
+  {
+    margin: 0;
+  }
 }
