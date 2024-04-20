@@ -407,6 +407,23 @@ const EmailConfirmation = () => {
             </a>
           </div>
         </div>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div className={styles.copyright}>
+        <p>2023 Drbbble. All rights reserved.</p>
+        <p><strong>20,501,853 </strong>shots dribbbled
+        <FontAwesomeIcon
+                icon={faBasketball}
+                style={{
+                  color: "#ffffff",
+                  borderRadius: "50%",
+                  backgroundColor: "black",
+                  margin: "10px"
+                }}
+              /></p>
+        </div>
       </div>
     </>
   );
