@@ -176,14 +176,26 @@
 }
 
 @media screen and (max-width: 768px) {
-  .card_container{
+  .preference
+  {
+    height: max-content;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .top_p
+  .preference_container
   {
     display: flex;
-    align-self: center;
-    justify-self: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
+  .pref_body
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } 
 }
