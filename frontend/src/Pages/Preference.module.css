@@ -207,19 +207,15 @@
     height: max-content;
     padding: 10%;
   }
-  .top_p
-  {
+  .top_p {
     padding: 10%;
     height: fit-content;
     width: fit-content;
   }
-  .cardClass1,
-  .card1,
-  .cardClass2,
-  .card2,
-  .cardClass3,
-  .card3
-  {
+
+  .card1_active,
+  .card2_active,
+  .card3_active {
     margin: 0;
   }
 }
