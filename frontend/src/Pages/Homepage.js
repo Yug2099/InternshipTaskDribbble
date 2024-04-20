@@ -39,9 +39,7 @@ const Homepage = () => {
       //       // User is already logged in, navigate to the appropriate page
       navigate(`/setprofile/${userInfo._id}`);
     }
-    else{
-      navigate("/");
-    }
+    // else{}
   }, [navigate]);
 
   const handleChange = (e) => {

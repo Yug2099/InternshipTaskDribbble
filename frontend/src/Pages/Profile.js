@@ -21,8 +21,8 @@ const Profile = () => {
   useEffect(() => {
     if (!userInfo) {
       navigate("/");
-      fetchUserProfile(userInfo._id);
     }
+    fetchUserProfile(userInfo._id);
   }, [navigate]);
 
   const fetchUserProfile = async (userId) => {
@@ -108,7 +108,7 @@ const Profile = () => {
       );
       userInfo = { ...userInfo, pic: image, location: location };
       localStorage.removeItem("userInfo");
-      localStorage.setItem("userInfo", userInfo);
+      localStorage.setItem("userInfo", JSON.stringify(userInfo));
 
       // Display the updated profile details
       console.log("Profile updated successfully:", response.data);
