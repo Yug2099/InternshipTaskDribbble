@@ -108,7 +108,7 @@ const Profile = () => {
       );
       userInfo = { ...userInfo, pic: image, location: location };
       localStorage.removeItem("userInfo");
-      localStorage.setItem("userInfo", JSON.stringify(userInfo));
+      localStorage.setItem("userInfo", userInfo);
 
       // Display the updated profile details
       console.log("Profile updated successfully:", response.data);
