@@ -181,8 +181,8 @@
     height: max-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
   }
   .preference_container
   {
@@ -201,7 +201,7 @@
   } 
 .top_head {
   height: max-content;
-  width: max-content;
+  width: fit-content;
 }
 .card_container{
   display: flex;
