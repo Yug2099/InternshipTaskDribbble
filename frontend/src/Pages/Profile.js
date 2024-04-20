@@ -84,7 +84,7 @@ const Profile = () => {
   const updateUserProfile = async () => {
     try {
       // Retrieve user information from local storage
-      const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      let userInfo = JSON.parse(localStorage.getItem("userInfo"));
       if (!userInfo || !userInfo._id) {
         console.error("User information not found in local storage");
         return;
