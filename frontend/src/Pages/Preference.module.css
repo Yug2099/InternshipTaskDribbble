@@ -217,5 +217,7 @@
   .card2_active,
   .card3_active {
     margin: 0;
+    width: fit-content;
+    height: fit-content;
   }
 }
