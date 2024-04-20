@@ -412,7 +412,7 @@ const EmailConfirmation = () => {
         <hr />
         <br />
         <div className={styles.copyright}>
-        <p>2023 Drbbble. All rights reserved.</p>
+        <p>©2023 Drbbble. All rights reserved.</p>
         <p><strong>20,501,853 </strong>shots dribbbled
         <FontAwesomeIcon
                 icon={faBasketball}
