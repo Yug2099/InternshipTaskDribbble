@@ -64,7 +64,9 @@ const Homepage = () => {
         { ...formData },
         config
       );
-      localStorage.setItem("userInfo",response.data);
+      localStorage.setItem("userInfo", response.data);
+      console.log("response.data: ",response.data);
+      console.log("response: ",response)
       if (response.data) {
         // User successfully registered
         navigate(`/setprofile/${response.data.userId}`);
