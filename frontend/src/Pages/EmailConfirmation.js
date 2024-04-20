@@ -413,26 +413,26 @@ const EmailConfirmation = () => {
                 Design Industry Trends
               </a>
             </div>
-          <br />
-          <br />
-          </div>
-          <hr style={{borderTop: "1px solid black", width: "10px"}} />
-          <div className={styles.copyright}>
-            <p>©2023 Drbbble. All rights reserved.</p>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <p>
-                <strong>20,501,853 </strong>shots dribbbled
-              </p>
-              <FontAwesomeIcon
-                icon={faBasketball}
-                style={{
-                  color: "#ffffff",
-                  borderRadius: "50%",
-                  backgroundColor: "pink",
-                  margin: "0 10px",
-                }}
-              />
-              <br />
+            <br />
+            <br />
+            <hr style={{ borderTop: "1px solid black", width: "10px" }} />
+            <div className={styles.copyright}>
+              <p>©2023 Drbbble. All rights reserved.</p>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <p>
+                  <strong>20,501,853 </strong>shots dribbbled
+                </p>
+                <FontAwesomeIcon
+                  icon={faBasketball}
+                  style={{
+                    color: "#ffffff",
+                    borderRadius: "50%",
+                    backgroundColor: "pink",
+                    margin: "0 10px",
+                  }}
+                />
+                <br />
+              </div>
             </div>
           </div>
         </div>
