@@ -21,8 +21,8 @@ const Profile = () => {
   useEffect(() => {
     if (!userInfo) {
       navigate("/");
+      fetchUserProfile(userInfo._id);
     }
-    fetchUserProfile(userInfo._id);
   }, [navigate]);
 
   const fetchUserProfile = async (userId) => {
