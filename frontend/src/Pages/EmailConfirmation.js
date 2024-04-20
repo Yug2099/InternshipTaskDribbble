@@ -244,17 +244,184 @@ const EmailConfirmation = () => {
             </p>
           </div>
         )}
+
         <div className={styles.footer}>
-          <div className={styles.col1}>
-            <div className={styles.col1_row1}>
-              <h1 className={styles.row1_heading}>dribbble</h1>
-              <p className={styles.p_footer}>Dribbble is the world's leading</p>
-              <p className={styles.p_footer}>
-                community for creatives to share, grow,
-              </p>
-              <p className={styles.p_footer}>and get hired.</p>
+          <div className={styles.footer_divide}>
+            <div className={styles.col1}>
+              <div className={styles.col1_row1}>
+                <h1 className={styles.row1_heading}>dribbble</h1>
+                <p className={styles.p_footer}>
+                  Dribbble is the world's leading
+                </p>
+                <p className={styles.p_footer}>
+                  community for creatives to share, grow,
+                </p>
+                <p className={styles.p_footer}>and get hired.</p>
+              </div>
+              <div className={styles.col1_row2}>
+                <FontAwesomeIcon
+                  icon={faBasketball}
+                  style={{
+                    color: "#ffffff",
+                    borderRadius: "50%",
+                    backgroundColor: "black",
+                    margin: "10px",
+                  }}
+                />
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  style={{ color: "#3b3c50", padding: "10px" }}
+                />
+                <FontAwesomeIcon
+                  icon={faSquareFacebook}
+                  style={{ color: "#3d3f4d", padding: "10px" }}
+                />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  style={{ color: "#3b3b47", padding: "10px" }}
+                />
+                <FontAwesomeIcon
+                  icon={faPinterest}
+                  style={{ color: "#434552", padding: "10px" }}
+                />
+              </div>
             </div>
-            <div className={styles.col1_row2}>
+            <div className={styles.col2}>
+              <h4 className={styles.footer_h4}>For Designers</h4>
+              <a href="" className={styles.foot_links}>
+                Go Pro!
+              </a>
+              <a href="" className={styles.foot_links}>
+                Explore Design Work
+              </a>
+              <a href="" className={styles.foot_links}>
+                Design Blogs
+              </a>
+              <a href="" className={styles.foot_links}>
+                Overtime Podcast
+              </a>
+              <a href="" className={styles.foot_links}>
+                Playoffs
+              </a>
+              <a href="" className={styles.foot_links}>
+                Weekly Warm-Up
+              </a>
+              <a href="" className={styles.foot_links}>
+                Refer a Friend
+              </a>
+              <a href="" className={styles.foot_links}>
+                Code of conduct
+              </a>
+            </div>
+            <div className={styles.col3}>
+              <h4 className={styles.footer_h4}>Hire Designers</h4>
+              <a href="" className={styles.foot_links}>
+                Post a job opening
+              </a>
+              <a href="" className={styles.foot_links}>
+                Post a freelance project
+              </a>
+              <a href="" className={styles.foot_links}>
+                Search for designers
+              </a>
+              <br />
+              <h4 className={styles.footer_h4}>Brands</h4>
+              <a href="" className={styles.foot_links}>
+                Advertise with us
+              </a>
+            </div>
+            <div className={styles.col4}>
+              <h4 className={styles.footer_h4}>Company</h4>
+              <a href="" className={styles.foot_links}>
+                About
+              </a>
+              <a href="" className={styles.foot_links}>
+                Careers
+              </a>
+              <a href="" className={styles.foot_links}>
+                Support
+              </a>
+              <a href="" className={styles.foot_links}>
+                Media kit
+              </a>
+              <a href="" className={styles.foot_links}>
+                Testimonials
+              </a>
+              <a href="" className={styles.foot_links}>
+                API
+              </a>
+              <a href="" className={styles.foot_links}>
+                Terms of service
+              </a>
+              <a href="" className={styles.foot_links}>
+                Privacy Policy
+              </a>
+              <a href="" className={styles.foot_links}>
+                Cookie policy
+              </a>
+            </div>
+            <div className={styles.col5}>
+              <h4 className={styles.footer_h4}>Directories</h4>
+              <a href="" className={styles.foot_links}>
+                Design jobs
+              </a>
+              <a href="" className={styles.foot_links}>
+                Designers for hire
+              </a>
+              <a href="" className={styles.foot_links}>
+                Freelance designers for hire
+              </a>
+              <a href="" className={styles.foot_links}>
+                Tags
+              </a>
+              <a href="" className={styles.foot_links}>
+                Places
+              </a>
+              <br />
+              <h4 className={styles.footer_h4}>Design assets</h4>
+              <a href="" className={styles.foot_links}>
+                Dribble Marketplace
+              </a>
+              <a href="" className={styles.foot_links}>
+                Creative Market
+              </a>
+              <a href="" className={styles.foot_links}>
+                Fontspring
+              </a>
+              <a href="" className={styles.foot_links}>
+                Font Squirrel
+              </a>
+            </div>
+            <div className={styles.col6}>
+              <h4 className={styles.footer_h4}>Design Resources</h4>
+              <a href="" className={styles.foot_links}>
+                Freelancing
+              </a>
+              <a href="" className={styles.foot_links}>
+                Design Hiring
+              </a>
+              <a href="" className={styles.foot_links}>
+                Design Portfolio
+              </a>
+              <a href="" className={styles.foot_links}>
+                Design Education
+              </a>
+              <a href="" className={styles.foot_links}>
+                Creative Process
+              </a>
+              <a href="" className={styles.foot_links}>
+                Design Industry Trends
+              </a>
+            </div>
+          </div>
+          <br />
+          <br />
+          <hr />
+          <br />
+          <div className={styles.copyright}>
+            <p>©2023 Drbbble. All rights reserved.</p>
+            <p>
+              <strong>20,501,853 </strong>shots dribbbled
               <FontAwesomeIcon
                 icon={faBasketball}
                 style={{
@@ -264,170 +431,8 @@ const EmailConfirmation = () => {
                   margin: "10px",
                 }}
               />
-              <FontAwesomeIcon
-                icon={faTwitter}
-                style={{ color: "#3b3c50", padding: "10px" }}
-              />
-              <FontAwesomeIcon
-                icon={faSquareFacebook}
-                style={{ color: "#3d3f4d", padding: "10px" }}
-              />
-              <FontAwesomeIcon
-                icon={faInstagram}
-                style={{ color: "#3b3b47", padding: "10px" }}
-              />
-              <FontAwesomeIcon
-                icon={faPinterest}
-                style={{ color: "#434552", padding: "10px" }}
-              />
-            </div>
+            </p>
           </div>
-          <div className={styles.col2}>
-            <h4 className={styles.footer_h4}>For Designers</h4>
-            <a href="" className={styles.foot_links}>
-              Go Pro!
-            </a>
-            <a href="" className={styles.foot_links}>
-              Explore Design Work
-            </a>
-            <a href="" className={styles.foot_links}>
-              Design Blogs
-            </a>
-            <a href="" className={styles.foot_links}>
-              Overtime Podcast
-            </a>
-            <a href="" className={styles.foot_links}>
-              Playoffs
-            </a>
-            <a href="" className={styles.foot_links}>
-              Weekly Warm-Up
-            </a>
-            <a href="" className={styles.foot_links}>
-              Refer a Friend
-            </a>
-            <a href="" className={styles.foot_links}>
-              Code of conduct
-            </a>
-          </div>
-          <div className={styles.col3}>
-            <h4 className={styles.footer_h4}>Hire Designers</h4>
-            <a href="" className={styles.foot_links}>
-              Post a job opening
-            </a>
-            <a href="" className={styles.foot_links}>
-              Post a freelance project
-            </a>
-            <a href="" className={styles.foot_links}>
-              Search for designers
-            </a>
-            <br />
-            <h4 className={styles.footer_h4}>Brands</h4>
-            <a href="" className={styles.foot_links}>
-              Advertise with us
-            </a>
-          </div>
-          <div className={styles.col4}>
-            <h4 className={styles.footer_h4}>Company</h4>
-            <a href="" className={styles.foot_links}>
-              About
-            </a>
-            <a href="" className={styles.foot_links}>
-              Careers
-            </a>
-            <a href="" className={styles.foot_links}>
-              Support
-            </a>
-            <a href="" className={styles.foot_links}>
-              Media kit
-            </a>
-            <a href="" className={styles.foot_links}>
-              Testimonials
-            </a>
-            <a href="" className={styles.foot_links}>
-              API
-            </a>
-            <a href="" className={styles.foot_links}>
-              Terms of service
-            </a>
-            <a href="" className={styles.foot_links}>
-              Privacy Policy
-            </a>
-            <a href="" className={styles.foot_links}>
-              Cookie policy
-            </a>
-          </div>
-          <div className={styles.col5}>
-            <h4 className={styles.footer_h4}>Directories</h4>
-            <a href="" className={styles.foot_links}>
-              Design jobs
-            </a>
-            <a href="" className={styles.foot_links}>
-              Designers for hire
-            </a>
-            <a href="" className={styles.foot_links}>
-              Freelance designers for hire
-            </a>
-            <a href="" className={styles.foot_links}>
-              Tags
-            </a>
-            <a href="" className={styles.foot_links}>
-              Places
-            </a>
-            <br />
-            <h4 className={styles.footer_h4}>Design assets</h4>
-            <a href="" className={styles.foot_links}>
-              Dribble Marketplace
-            </a>
-            <a href="" className={styles.foot_links}>
-              Creative Market
-            </a>
-            <a href="" className={styles.foot_links}>
-              Fontspring
-            </a>
-            <a href="" className={styles.foot_links}>
-              Font Squirrel
-            </a>
-          </div>
-          <div className={styles.col6}>
-            <h4 className={styles.footer_h4}>Design Resources</h4>
-            <a href="" className={styles.foot_links}>
-              Freelancing
-            </a>
-            <a href="" className={styles.foot_links}>
-              Design Hiring
-            </a>
-            <a href="" className={styles.foot_links}>
-              Design Portfolio
-            </a>
-            <a href="" className={styles.foot_links}>
-              Design Education
-            </a>
-            <a href="" className={styles.foot_links}>
-              Creative Process
-            </a>
-            <a href="" className={styles.foot_links}>
-              Design Industry Trends
-            </a>
-          </div>
-        <br />
-        <br />
-        <hr />
-        <br />
-        <div className={styles.copyright}>
-          <p>©2023 Drbbble. All rights reserved.</p>
-          <p>
-            <strong>20,501,853 </strong>shots dribbbled
-            <FontAwesomeIcon
-              icon={faBasketball}
-              style={{
-                color: "#ffffff",
-                borderRadius: "50%",
-                backgroundColor: "black",
-                margin: "10px",
-              }}
-            />
-          </p>
-        </div>
         </div>
       </div>
     </>
