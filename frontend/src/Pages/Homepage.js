@@ -35,6 +35,7 @@ const Homepage = () => {
     // if (userInfo) {
     // const userInfo = JSON.parse(userInfoString);
     if (userInfo) {
+      console.log(userInfo._id)
       //       // User is already logged in, navigate to the appropriate page
       navigate(`/setprofile/${userInfo._id}`);
     }
