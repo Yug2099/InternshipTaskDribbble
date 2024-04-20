@@ -70,7 +70,7 @@ const Homepage = () => {
       console.log("response: ", response);
       if (response.data) {
         // User successfully registered
-        navigate(`/setprofile/${response.data.userId}`);
+        navigate(`/setprofile/${response.data._id}`);
       } else {
         // Handle registration failure
         console.error("Failed to register user.");
