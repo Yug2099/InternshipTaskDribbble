@@ -199,4 +199,9 @@
     align-items: center;
     justify-content: center;
   } 
+.top_head {
+  height: max-content;
+  width: max-content;
+}
+  
 }
