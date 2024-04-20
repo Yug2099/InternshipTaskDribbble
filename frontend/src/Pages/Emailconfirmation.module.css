@@ -259,9 +259,10 @@
     font-weight: 700;
 }
 
-
-
-
+.col1_row2
+{
+  padding: 10px 10px 10px 0;
+}
 
 /* EmailSender.module.css */
 .loading {
