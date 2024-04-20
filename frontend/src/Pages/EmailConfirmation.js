@@ -413,11 +413,10 @@ const EmailConfirmation = () => {
                 Design Industry Trends
               </a>
             </div>
-          </div>
-          <br />
           <br />
           <hr style={{borderTop: "1px solid black", width: "10px"}} />
           <br />
+          </div>
           <div className={styles.copyright}>
             <p>©2023 Drbbble. All rights reserved.</p>
             <div style={{ display: "flex", flexDirection: "row" }}>
