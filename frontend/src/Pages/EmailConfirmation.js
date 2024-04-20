@@ -432,9 +432,9 @@ const EmailConfirmation = () => {
                   margin: "0 10px",
                 }}
               />
-              <br />
             </div>
           </div>
+              <br />
         </div>
       </div>
     </>
