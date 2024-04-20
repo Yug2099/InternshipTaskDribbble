@@ -415,7 +415,7 @@ const EmailConfirmation = () => {
             </div>
           </div>
           <br />
-          <hr style={{borderTop: "1px solid black", width: "100%"}} />
+          <hr style={{borderTop: "1px solid black", width: "100%", padding:"50px"}} />
           <br />
           <div className={styles.copyright}>
             <p>©2023 Drbbble. All rights reserved.</p>
